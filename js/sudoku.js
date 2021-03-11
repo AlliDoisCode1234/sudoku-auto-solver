@@ -167,8 +167,8 @@ const nextBoards = board => {
         for (let i = 1; i <= 9; i++){
             // create a new board
             // instead of all boards pointing to one board
-            var newBoard = [...board]
-            var row = [...newBoard[y]]
+            let newBoard = [...board]
+            let row = [...newBoard[y]]
             row[x] = i
             newBoard[y] = row
             res.push(newBoard)
@@ -181,8 +181,8 @@ const findEmptySquare = board =>{
     // THIS FUNCTION WORKS.
     // Board -> [Int, Int] 
     // (get the i j coordinates for the first empty square)
-    for (var i = 0; i < 9; i++){
-        for (var j = 0; j < 9; j++){
+    for (let i = 0; i < 9; i++){
+        for (let j = 0; j < 9; j++){
             if (board[i][j] == null) {
                 return [i, j]
             }
@@ -200,8 +200,8 @@ const keepOnlyValid = boards =>{
     // pass in a method that checks over each and every single board
     // if the valid board method returns true, it will be kept
     // else it will be dropped
-    var res = []
-    for (var i = 0; i < boards.length; i++){
+    let res = []
+    for (let i = 0; i < boards.length; i++){
         if (validBoard(boards[i])){
             res.push(boards[i])
         }
@@ -223,9 +223,9 @@ const validBoard = board =>{
 
 const rowsGood = board => {
      // traverse horizontally to check for duplicates
-    for (var i = 0; i < 9; i++){
-        var cur = []
-        for (var j = 0; j < 9; j++){
+    for (let i = 0; i < 9; i++){
+        let cur = []
+        for (let j = 0; j < 9; j++){
             if (cur.includes(board[i][j])){
                 return false
             }
@@ -239,9 +239,9 @@ const rowsGood = board => {
 
 const columnsGood  = board =>{
      // traverse vertically to check for duplicates
-    for (var i = 0; i < 9; i++){
-        var cur = []
-        for (var j = 0; j < 9; j++){
+    for (let i = 0; i < 9; i++){
+        let cur = []
+        for (let j = 0; j < 9; j++){
             if (cur.includes(board[j][i])){
                 return false
             }
@@ -264,13 +264,13 @@ const boxesGood = board => {
     // shift up or down 3 boxes
     // traverse vertically and horizontally
     // makes sure there are no repeating numbers for each box
-    for (var y = 0; y < 9; y += 3){
-        for (var x = 0; x < 9; x += 3){
+    for (let y = 0; y < 9; y += 3){
+        for (let x = 0; x < 9; x += 3){
             // check if grid contains a duplicate
             // each traversal should examine each box
-            var cur = []
-            for (var i = 0; i < 9; i++){
-                var coordinates = [...boxCoordinates[i]]
+            let cur = []
+            for (let i = 0; i < 9; i++){
+                let coordinates = [...boxCoordinates[i]]
                 coordinates[0] += y
                 coordinates[1] += x
                 if (cur.includes(board[coordinates[0]][coordinates[1]])){
@@ -314,9 +314,9 @@ const updateBoard = board => {
         }
     }
     else{
-        for (var i = 1; i <= 9; i++){
-            var row = ""
-            for (var j = 0; j < 9; j++){
+        for (let i = 1; i <= 9; i++){
+            let row = ""
+            for (let j = 0; j < 9; j++){
                 if (row == ""){
                     row = row + String(board[i - 1][j])
                 }
