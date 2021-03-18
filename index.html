@@ -14,7 +14,9 @@
 </head>
 <body>
     
-    <h2>Sudoku Auto Solver</h2>
+    <h2 id="heading">Sudoku Auto Solver</h2>
+    <h4>Start by incrementing any square up to the number 9(nine). Click the button to see if it can be solved!</h4>
+
     <div id = "initialBoard">
         <input id = "1" type="number" maxlength="1" max = "9" min = "1">
         <input id = "2" type="number" maxlength="1" max = "9" min = "1">
@@ -107,7 +109,7 @@
         <input id = "81" type="number" maxlength="1" max = "9" min = "1">
         <br>
     </div>
-    <button onclick="initiate()" class = "btn btn-primary">SOLVE</button>
+    <button id ="solver-btn" onclick="initiate()" class = "btn btn-primary">SOLVE</button>
 
     <div id = "answerBoard">
         <p id = "row 1"></p>
@@ -123,7 +125,7 @@
     <script>
         // initially populating the answer output area
         const placeHolder = " ? "
-        for (var i = 1; i <= 9; i++){
+        for (let i = 1; i <= 9; i++){
             document.getElementById("row " + String(i)).innerHTML = placeHolder +  "\xa0\xa0\xa0\xa0\xa0\xa0" + placeHolder + "\xa0\xa0\xa0\xa0\xa0\xa0" + placeHolder + "\xa0\xa0\xa0\xa0\xa0\xa0" + placeHolder + "\xa0\xa0\xa0\xa0\xa0\xa0" + placeHolder + "\xa0\xa0\xa0\xa0\xa0\xa0" + placeHolder + "\xa0\xa0\xa0\xa0\xa0\xa0" +  placeHolder + "\xa0\xa0\xa0\xa0\xa0\xa0" +  placeHolder + "\xa0\xa0\xa0\xa0\xa0\xa0" + placeHolder
         }
     </script>
