@@ -13,7 +13,7 @@
         <p><a href="https://allidoiscode1234.github.io/sudoku-auto-solver/" rel="nofollow">Visit Site</a></p>
         <br>
         <a href="https://allidoiscode1234.github.io/sudoku-auto-solver/" rel="nofollow">
-            <img src="https://media.giphy.com/media/oFaSIXhvHGTX6OoQ6L/giphy.gif" width="100%" alt="tetrisJS" data-canonical-src="https://media.giphy.com/media/oFaSIXhvHGTX6OoQ6L/giphy.gif" style="max-width:100%;">
+            <img src="https://media.giphy.com/media/oFaSIXhvHGTX6OoQ6L/giphy.gif" width="100%" alt="sudoku-auto-solver" data-canonical-src="https://media.giphy.com/media/oFaSIXhvHGTX6OoQ6L/giphy.gif" style="max-width:100%;">
         </a>
         <p><strong>Unlimited possibilities but only valid boards succeed.</p>
     </td>
